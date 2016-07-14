@@ -14,14 +14,14 @@
 - (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
-        CGRect tweetLabelRect = CGRectMake(10, 10, 350, 40);
+        CGRect tweetLabelRect = CGRectMake(10, 10, 350, 70);
         _summaryLabel= [[UILabel alloc]initWithFrame:tweetLabelRect];
-        _summaryLabel.numberOfLines=2;
+        _summaryLabel.numberOfLines=3;
         [_summaryLabel setFont:[UIFont systemFontOfSize:15]];
         [self.contentView addSubview:_summaryLabel];
         
         
-        CGRect imgLinkRect = CGRectMake(10, 50, 350, 50);
+        CGRect imgLinkRect = CGRectMake(10, 80, 350, 50);
         _detailTextView= [[UILabel alloc]initWithFrame:imgLinkRect];
         _detailTextView.numberOfLines=3;
          [_detailTextView setFont:[UIFont systemFontOfSize:11]];

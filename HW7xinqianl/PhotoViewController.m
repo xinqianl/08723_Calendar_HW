@@ -16,11 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.imageURL]];
-    UIImageView *imView = [[UIImageView alloc] initWithImage:[UIImage imageWithData: imageData]];
-    [imView setFrame:[[UIScreen mainScreen] bounds]];
-    imView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:imView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    NSLog(self.imageURL);
+    NSData * originalImageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.imageURL]];
+//    UIImageView *imView = [[UIImageView alloc] initWithImage:[UIImage imageWithData: originalImageData]];
+//    NSData *imageData = UIImageJPEGRepresentation(imView.image, 0.4);
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData: originalImageData]];
+    [imageView setFrame:[[UIScreen mainScreen] bounds]];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -35,14 +35,14 @@
 -(void) initialize{
     self.view.backgroundColor = [UIColor whiteColor];
      self.titleLabel = [[UILabel alloc]
-                           initWithFrame:CGRectMake (10.0f, 60.0f, 300.0f, 60.0f)];
+                           initWithFrame:CGRectMake (10.0f, 60.0f, 350.0f, 70.0f)];
     self.titleLabel.textColor = [UIColor blackColor];
     self.titleLabel.text = [NSString stringWithFormat:@"%@%@", @"Event title: ", self.event.summary];
-    self.titleLabel.numberOfLines = 2;
+    self.titleLabel.numberOfLines = 3;
     [self.view addSubview:self.titleLabel];
     
     GTLDateTime *start = self.event.start.dateTime ?: self.event.start.date;
-     self.startLabel = [[UILabel alloc]initWithFrame:CGRectMake (10.0f, 130.0f, 300.0f, 20.0f)];
+     self.startLabel = [[UILabel alloc]initWithFrame:CGRectMake (10.0f, 130.0f, 350.0f, 20.0f)];
     self.startLabel.textColor = [UIColor blackColor];
     self.startString = [NSDateFormatter localizedStringFromDate:[start date] dateStyle:NSDateFormatterShortStyle
                                                      timeStyle:NSDateFormatterShortStyle];
@@ -51,7 +51,7 @@
     [self.view addSubview:self.startLabel];
     
     GTLDateTime *end = self.event.end.dateTime ?: self.event.end.date;
-    self.endLabel = [[UILabel alloc]initWithFrame:CGRectMake (10.0f, 150.0f, 300.0f, 20.0f)];
+    self.endLabel = [[UILabel alloc]initWithFrame:CGRectMake (10.0f, 150.0f, 350.0f, 20.0f)];
     self.endLabel.textColor = [UIColor blackColor];
     self.endLabel.text =[NSString stringWithFormat:@"%@%@", @"Event end: ", [NSDateFormatter localizedStringFromDate:[end date]
                                                                                                       dateStyle:NSDateFormatterShortStyle
@@ -61,9 +61,9 @@
                                                                        timeStyle:NSDateFormatterShortStyle];
     [self.view addSubview:self.endLabel];
     
-    self.placeLabel = [[UILabel alloc]initWithFrame:CGRectMake (10.0f, 170.0f, 300.0f, 80.0f)];
+    self.placeLabel = [[UILabel alloc]initWithFrame:CGRectMake (10.0f, 170.0f, 350.0f, 80.0f)];
     self.placeLabel.textColor = [UIColor blackColor];
-    self.placeLabel.numberOfLines = 2;
+    self.placeLabel.numberOfLines = 3;
     self.placeLabel.text = [NSString stringWithFormat:@"%@%@", @"Event place: ",self.event.location];
     [self.view addSubview:self.placeLabel];
     
@@ -239,7 +239,8 @@
              else
              {
                  SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-                 [tweetSheet setInitialText: [NSString stringWithFormat:@"@MobileApp4 Title:%@ Start:%@ End:%@ Place:%@", self.event.summary, self.startString, self.endString, self.event.location]];
+                 [tweetSheet setInitialText: [NSString stringWithFormat:@"@MobileApp4 %@ %@-%@@%@", self.event.summary, self.startString, self.endString, self.event.location]];
+                 
                  
                  [self presentViewController:tweetSheet animated:YES completion:nil];
              }
