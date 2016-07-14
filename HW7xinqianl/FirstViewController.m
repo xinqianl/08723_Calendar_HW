@@ -17,6 +17,7 @@ static NSString *const kClientID = @"982039271111-7tk62tnrvdqobtbk63euo45v499ifc
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.detailViewController = [[EventDetailViewController alloc]init];
     self.events = [[NSMutableArray alloc]init];
     [self.tableView registerClass:[CustomViewCell class]forCellReuseIdentifier: @"Cell"];
@@ -25,7 +26,7 @@ static NSString *const kClientID = @"982039271111-7tk62tnrvdqobtbk63euo45v499ifc
     [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:kKeychainItemName
                                                           clientID:kClientID
                                                       clientSecret:nil];
-    self.title = @"Calendar Event Table";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,16 +55,10 @@ static NSString *const kClientID = @"982039271111-7tk62tnrvdqobtbk63euo45v499ifc
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.detailViewController = [[EventDetailViewController alloc]init];
     self.detailViewController.event = self.events[indexPath.row];
     [self.navigationController pushViewController:self.detailViewController animated:YES];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
-                                   initWithTitle: @"Back"
-                                   /// remember to change the target & action parameter to "nil"
-                                   style:UIBarButtonItemStyleDone
-                                   target:nil
-                                   action:nil];
-    [self.navigationItem setBackBarButtonItem:backButton];
-}
+    }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -104,7 +99,7 @@ static NSString *const kClientID = @"982039271111-7tk62tnrvdqobtbk63euo45v499ifc
         [self presentViewController:[self createAuthController] animated:YES completion:nil];
         
     } else {
-        
+        self.events = [[NSMutableArray alloc]init];
         [self fetchEvents];
     }
 }

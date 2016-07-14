@@ -8,15 +8,31 @@
 
 #import <UIKit/UIKit.h>
 #import "GTLCalendar.h"
-@interface EventDetailViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UILabel *startLabel;
-@property (weak, nonatomic) IBOutlet UILabel *endLabel;
-@property (weak, nonatomic) IBOutlet UILabel *placeLavel;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+@interface EventDetailViewController : UIViewController <UISplitViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) GTLCalendarEvent *event;
+@property (nonatomic, strong) CLGeocoder *geocoder;
+@property (strong, nonatomic) MKMapView *mapView;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (readonly) CLLocationCoordinate2D selectedCoordinate;
+@property (nonatomic, strong) MKPlacemark *placemark;
+@property (nonatomic, strong) MKPlacemark *result;
+@property (nonatomic, strong) NSArray *searchPlacemarksCache;
+@property (nonatomic, strong) NSArray *mapItemList;
+@property NSMutableArray *results;
+@property (nonatomic, strong) NSMutableArray *mapAnnotations;
 
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (strong, nonatomic) NSString *coordString;
+@property (assign, nonatomic) MKCoordinateRegion *region;
 
+@property (strong, nonatomic) CLLocation *location;
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UILabel *startLabel;
+@property (strong, nonatomic) UILabel *endLabel;
+@property (strong, nonatomic) UILabel *placeLabel;
+@property (strong, nonatomic) NSString *startString;
+@property (strong, nonatomic) NSString *endString;
 @end

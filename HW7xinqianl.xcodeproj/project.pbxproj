@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414166CE1D35D4FE0082E0E9 /* EventAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 414166CD1D35D4FE0082E0E9 /* EventAnnotation.m */; };
+		414166D11D373EFF0082E0E9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414166D01D373EFF0082E0E9 /* SecondViewController.m */; };
+		414166D41D37404E0082E0E9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414166D31D37404E0082E0E9 /* DetailViewController.m */; };
+		414166D71D37409B0082E0E9 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414166D61D37409B0082E0E9 /* PhotoViewController.m */; };
+		414166DA1D3741160082E0E9 /* CustomTweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 414166D91D3741160082E0E9 /* CustomTweetTableViewCell.m */; };
 		41BE1D4B1D342EB600C70473 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE1D4A1D342EB600C70473 /* main.m */; };
 		41BE1D4E1D342EB600C70473 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE1D4D1D342EB600C70473 /* AppDelegate.m */; };
 		41BE1D511D342EB600C70473 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE1D501D342EB600C70473 /* ViewController.m */; };
@@ -39,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		414166CC1D35D4FE0082E0E9 /* EventAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventAnnotation.h; sourceTree = "<group>"; };
+		414166CD1D35D4FE0082E0E9 /* EventAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventAnnotation.m; sourceTree = "<group>"; };
+		414166CF1D373EFF0082E0E9 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		414166D01D373EFF0082E0E9 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		414166D21D37404E0082E0E9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		414166D31D37404E0082E0E9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		414166D51D37409B0082E0E9 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		414166D61D37409B0082E0E9 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		414166D81D3741160082E0E9 /* CustomTweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTweetTableViewCell.h; sourceTree = "<group>"; };
+		414166D91D3741160082E0E9 /* CustomTweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTweetTableViewCell.m; sourceTree = "<group>"; };
 		41BE1D461D342EB600C70473 /* HW7xinqianl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW7xinqianl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BE1D4A1D342EB600C70473 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41BE1D4C1D342EB600C70473 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +146,16 @@
 				41BE1D5A1D342EB600C70473 /* Info.plist */,
 				41BE1D821D348C8F00C70473 /* EventDetailViewController.h */,
 				41BE1D831D348C8F00C70473 /* EventDetailViewController.m */,
+				414166CC1D35D4FE0082E0E9 /* EventAnnotation.h */,
+				414166CD1D35D4FE0082E0E9 /* EventAnnotation.m */,
+				414166CF1D373EFF0082E0E9 /* SecondViewController.h */,
+				414166D01D373EFF0082E0E9 /* SecondViewController.m */,
+				414166D81D3741160082E0E9 /* CustomTweetTableViewCell.h */,
+				414166D91D3741160082E0E9 /* CustomTweetTableViewCell.m */,
+				414166D21D37404E0082E0E9 /* DetailViewController.h */,
+				414166D31D37404E0082E0E9 /* DetailViewController.m */,
+				414166D51D37409B0082E0E9 /* PhotoViewController.h */,
+				414166D61D37409B0082E0E9 /* PhotoViewController.m */,
 				41BE1D491D342EB600C70473 /* Supporting Files */,
 			);
 			path = HW7xinqianl;
@@ -362,10 +387,15 @@
 			files = (
 				41BE1D841D348C8F00C70473 /* EventDetailViewController.m in Sources */,
 				41BE1D811D3479F400C70473 /* CustomViewCell.m in Sources */,
+				414166D41D37404E0082E0E9 /* DetailViewController.m in Sources */,
 				41BE1D511D342EB600C70473 /* ViewController.m in Sources */,
 				41BE1D4E1D342EB600C70473 /* AppDelegate.m in Sources */,
+				414166D11D373EFF0082E0E9 /* SecondViewController.m in Sources */,
 				41BE1D4B1D342EB600C70473 /* main.m in Sources */,
+				414166DA1D3741160082E0E9 /* CustomTweetTableViewCell.m in Sources */,
 				41BE1D7E1D3466C600C70473 /* FirstViewController.m in Sources */,
+				414166CE1D35D4FE0082E0E9 /* EventAnnotation.m in Sources */,
+				414166D71D37409B0082E0E9 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
